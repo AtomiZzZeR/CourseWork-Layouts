@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Salon</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader-1">
+            <svg>
+                <g>
+                    <path d="M 50,100 A 1,1 0 0 1 50,0" />
+                </g>
+                <g>
+                    <path d="M 50,75 A 1,1 0 0 0 50,-25" />
+                </g>
+                <defs>
+                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#BFE2FF;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#337AB7;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="header__inner">
+                    <a class="navbar-brand header__title-name" asp-area="" asp-controller="Home"
+                        asp-action="Index">Beauty
+                        Salon</a>
+
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1 header__list">
+                            <li class="nav-item header__item">
+                                <a class="nav-link text-dark header__link" asp-area="" asp-controller="Clients"
+                                    asp-action="Index">Клиенты</a>
+                            </li>
+                            <li class="nav-item header__item">
+                                <a class="nav-link text-dark header__link" asp-area="" asp-controller="Amenities"
+                                    asp-action="Index">Услуги</a>
+                            </li>
+                            <li class="nav-item header__item">
+                                <a class="nav-link text-dark header__link" asp-area="" asp-controller="Masters"
+                                    asp-action="Index">Мастера</a>
+                            </li>
+                            <li class="nav-item header__item">
+                                <a class="nav-link text-dark header__link" asp-area="" asp-controller="History"
+                                    asp-action="Index">Чеки</a>
+                            </li>
+                            <li class="nav-item header__item">
+                                <a class="nav-link text-dark header__link" asp-area="" asp-controller="Visits"
+                                    asp-action="Index">Посещения</a>
+                            </li>
+                            <li class="nav-item header__item">
+                                <a class="nav-link text-dark header__link" asp-area="" asp-controller="Visits"
+                                    asp-action="Report">Отчеты</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <main role="main" class="pb-3">
+            <div class="container">
+                <div class="main__inner">
+                    <div class="main__box-img"><img src="img/main-img.jpg" alt="img" class="main__img" height="600px;">
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="address">&copy; 2021 - BeautySalon</div><a asp-area="" class="footer__link-1"
+                        asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        window.onload = function () {
+            document.querySelector('.preloader').classList.add("preloader-remove");
+        };
+        $(window).on('load', function () {
+            $('.preloader').addClass("preloader-remove");
+        });
+    </script>
+</body>
+
+</html>
